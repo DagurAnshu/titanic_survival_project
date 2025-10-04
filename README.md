@@ -16,6 +16,9 @@ An interactive Streamlit dashboard that predicts Titanic passenger survival usin
 4. seaborn
 5. Scikit Learn
 6. Streamlit
+# What I have Upload
+I have uploaded the code of my projet and also upload the screenshot how does the dashboard looks like
+   
 # Conclusion
 Current version is looking absolute fine to commit , But more changes can also be make which will make it great 
    
