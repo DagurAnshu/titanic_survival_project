@@ -112,10 +112,10 @@ for name, clf in models.items():
 # Streamlit UI
 import streamlit as st
 st.set_page_config(page_title="Titanic Survival Dashboard", layout="wide")
-st.title("🚢 Titanic Survival Prediction Dashboard")
+st.title("Titanic Survival Prediction Dashboard")
 
 # Sidebar input
-st.sidebar.header("🧍 Passenger Details")
+st.sidebar.header("Passenger Details")
 pclass = st.sidebar.selectbox("Passenger Class", [1, 2, 3])
 sex = st.sidebar.selectbox("Sex", ['male', 'female'])
 age = st.sidebar.slider("Age", 0, 80, 30)
@@ -140,8 +140,8 @@ prediction = chosen_model.predict(input_transformed)[0]
 proba = chosen_model.predict_proba(input_transformed)[0][1]
 
 # Output prediction
-st.subheader("🧠 Prediction Result")
-st.write("🛟 Survived" if prediction == 1 else "⚓ Did Not Survive")
+st.subheader("Prediction Result")
+st.write("Survived" if prediction == 1 else " Did Not Survive")
 st.metric(label="Survival Probability", value=f"{proba:.2%}")
 
 # Survival rate comparison
@@ -164,7 +164,7 @@ with col2:
     st.pyplot(fig2)
 
 # Evaluation metrics
-st.subheader("📈 Model Evaluation")
+st.subheader("Model Evaluation")
 preds_eval = chosen_model.predict(X_test_transformed)
 cm = confusion_matrix(y_test, preds_eval)
 report = classification_report(y_test, preds_eval, output_dict=True)
@@ -192,4 +192,5 @@ for ax in [ax3, ax4]:
     ax.title.set_color('lightgreen')
 
 st.pyplot(fig3)
+
 
